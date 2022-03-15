@@ -92,6 +92,7 @@ elseif strcmpi(excit_param.type, 'sin')
         scpiset(fid_instr.osc, param, 'STOP', '');
         scpiget(fid_instr.osc, param, 'ADER');
         scpiset(fid_instr.osc, param, 'SING', '');
+        scpiset(fid_instr.gen, param, 'OUTP:SYNC', 'ON');
         
         fprintf('Acquiring...');
         

@@ -17,7 +17,8 @@ if nargin < 4
     type = 'char';
 end
 
-if ~contains(cmd, '?')
+%if ~contains(cmd, '?')
+if ~size(strfind(cmd, '?'),1)
     cmd = [cmd '?'];
 end
 
